@@ -67,6 +67,12 @@ Follow [this](https://support.google.com/accounts/answer/185833) instructions on
 
 Reference for how to send emails in python: https://code.tutsplus.com/tutorials/sending-emails-in-python-with-smtp--cms-29975
 
+### How to setup webcam
+
+Install fswebcam
+
+    sudo apt-get install fswebcam
+
 TODO:
 
 [ ] Take pictures
