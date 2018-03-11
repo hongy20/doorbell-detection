@@ -1,9 +1,12 @@
 import sys
-# sys.path.insert(0, './osx-x86_64-1.3.0')
-sys.path.insert(0, './rpi-arm-raspbian-8.0-1.3.0')
+sys.path.insert(0, './osx-x86_64-1.3.0')
+# sys.path.insert(0, './rpi-arm-raspbian-8.0-1.3.0')
 
 import snowboydecoder
 import signal
+
+from say_cheese import capture
+from send_email import send
 
 interrupted = False
 
@@ -15,6 +18,17 @@ def signal_handler(signal, frame):
 def interrupt_callback():
     global interrupted
     return interrupted
+
+def detected_callback():
+    snowboydecoder.play_audio_file()
+    try:
+        capture()
+    except:
+        print "Error when capturing images"
+    try:
+        send()
+    except:
+        print "Error when sending emails"
 
 if len(sys.argv) == 1:
     print("Error: need to specify model name")
@@ -30,7 +44,7 @@ detector = snowboydecoder.HotwordDetector(model, sensitivity=0.5)
 print('Listening... Press Ctrl+C to exit')
 
 # main loop
-detector.start(detected_callback=snowboydecoder.play_audio_file,
+detector.start(detected_callback=detected_callback,
                interrupt_check=interrupt_callback,
                sleep_time=0.03)
 
