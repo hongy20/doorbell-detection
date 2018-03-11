@@ -1,6 +1,9 @@
 import sys
-sys.path.insert(0, './osx-x86_64-1.3.0')
-# sys.path.insert(0, './rpi-arm-raspbian-8.0-1.3.0')
+
+if sys.platform == "linux2":
+    sys.path.insert(0, './rpi-arm-raspbian-8.0-1.3.0')
+elif sys.platform == "darwin":
+    sys.path.insert(0, './osx-x86_64-1.3.0')
 
 import snowboydecoder
 import signal
@@ -29,6 +32,7 @@ def detected_callback():
         send()
     except:
         print "Error when sending emails"
+    print("Continue listening... Press Ctrl+C to exit")
 
 if len(sys.argv) == 1:
     print("Error: need to specify model name")
