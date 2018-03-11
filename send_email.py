@@ -4,6 +4,8 @@ from email.mime.multipart import MIMEMultipart
 from email.MIMEImage import MIMEImage
 from email.mime.text import MIMEText
 import smtplib
+import glob
+import os
 
 # create message object instance
 msg = MIMEMultipart()
@@ -23,8 +25,13 @@ msg['Subject'] = "Someone rings the doorbell"
 # add in the message body
 msg.attach(MIMEText(message, 'plain'))
 
+# find the latest image in folder images
+list_of_files = glob.glob('images/*.jpg') # * means all if need specific format then *.csv
+latest_file = max(list_of_files, key=os.path.getctime)
+print 'Image "%s" will be attached.' % latest_file
+
 # attach image to message body
-msg.attach(MIMEImage(file("images/test.jpg").read()))
+msg.attach(MIMEImage(file(latest_file).read()))
 
 #create server
 server = smtplib.SMTP('smtp.gmail.com: 587')
