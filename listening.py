@@ -1,5 +1,6 @@
 import sys
-sys.path.insert(0, './osx-x86_64-1.3.0')
+# sys.path.insert(0, './osx-x86_64-1.3.0')
+sys.path.insert(0, './rpi-arm-raspbian-8.0-1.3.0')
 
 import snowboydecoder
 import signal

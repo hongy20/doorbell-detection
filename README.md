@@ -32,7 +32,7 @@ Make sure that you can record audio with your microphone:
 First `apt-get` install `swig`, `sox`, `portaudio` and its Python binding `pyaudio`:
 
     sudo apt-get install swig3.0 python-pyaudio python3-pyaudio sox
-    pip install pyaudio
+    pip install pyaudio # or sudo apt-get install python-pyaudio
 
 Then install the `atlas` matrix computing library:
 
