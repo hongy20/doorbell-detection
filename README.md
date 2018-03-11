@@ -65,6 +65,8 @@ Follow [this](https://support.google.com/accounts/answer/185833) instructions on
     your_account@gmail.com
     app_password
 
+Reference for how to send emails in python: https://code.tutsplus.com/tutorials/sending-emails-in-python-with-smtp--cms-29975
+
 TODO:
 
 [ ] Take pictures
