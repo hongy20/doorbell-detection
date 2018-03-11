@@ -64,3 +64,9 @@ Follow [this](https://support.google.com/accounts/answer/185833) instructions on
 
     your_account@gmail.com
     app_password
+
+TODO:
+
+[ ] Take pictures
+
+[ ] Send picture as attachment
