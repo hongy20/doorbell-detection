@@ -51,7 +51,9 @@ https://snowboy.kitt.ai
 ### How to run
 
 Doorbell detection on MacOS
+
     python listening.py model/mac_doorbell_1.pmdl
 
 “喂，是我吗” on MacOS
+
     python listening.py model/mac_hey_is_it_me.pmdl
