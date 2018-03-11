@@ -57,3 +57,10 @@ Doorbell detection on MacOS
 “喂，是我吗” on MacOS
 
     python listening.py model/mac_hey_is_it_me.pmdl
+
+### How to setup email account for notifications
+
+Follow [this](https://support.google.com/accounts/answer/185833) instructions on how to generate an App password. Then create a `credential.txt` file under the root with content:
+
+    your_account@gmail.com
+    app_password
