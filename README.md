@@ -48,6 +48,10 @@ If you need extra setup on your audio (especially on a Raspberry Pi), please see
 
 https://snowboy.kitt.ai
 
+Or, record it manually and run script
+
+    python training.py 1.wav 2.wav 3.wav 1-2-3.pmdl
+
 ### How to run
 
 Doorbell detection on MacOS
@@ -57,6 +61,16 @@ Doorbell detection on MacOS
 “喂，是我吗” on MacOS
 
     python listening.py model/mac_hey_is_it_me.pmdl
+
+Start the doorbell detection in the background
+
+    python listening.py model/mac_doorbell_1.pmdl
+
+Stop the background task
+
+    ps aux |grep python
+    # check for the relevant PID
+    kill <relevantPID>
 
 ### How to setup email account for notifications
 
@@ -75,7 +89,6 @@ Install fswebcam
 
 TODO:
 
-[ ] start in background
-[ ] restart automatically when crashes
 [ ] update email template
+
 [ ] update email list
