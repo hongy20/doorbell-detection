@@ -1,4 +1,5 @@
 credential.txt
+nohup.out
 *.pyc
 
 # Ignore all the images, except the test jpg
