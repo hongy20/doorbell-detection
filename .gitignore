@@ -1,2 +1,6 @@
 credential.txt
 *.pyc
+
+# Ignore all the images, except the test jpg
+images/*.jpg
+!images/test.jpg
