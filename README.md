@@ -75,6 +75,7 @@ Install fswebcam
 
 TODO:
 
-[ ] Take pictures
-
-[ ] Send picture as attachment
+[ ] start in background
+[ ] restart automatically when crashes
+[ ] update email template
+[ ] update email list
