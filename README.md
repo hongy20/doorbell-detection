@@ -64,7 +64,7 @@ Doorbell detection on MacOS
 
 Start the doorbell detection in the background
 
-    python listening.py model/mac_doorbell_1.pmdl
+    nohup python listening.py models/rpi_doorbell.pmdl &
 
 Stop the background task
 
